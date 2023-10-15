@@ -9,7 +9,10 @@ from PipelineWrapper import PipelineWrapper
 from diffusers import DiffusionPipeline
 import torch
 import os
+from PIL import Image
+from io import BytesIO
 
+from diffusers import StableDiffusionImg2ImgPipeline
 
 def translate_text(source : str) -> str:
     tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-ru-en")
